@@ -6,7 +6,7 @@
   "scripts": {
     "start": "http-server",
     "lint": "eslint",
-    "build": "NODE_ENV=development&&webpack",
+    "build": "set NODE_ENV=development&&webpack",
     "build:prod": "webpack",
     "nodemon": "nodemon"
   },

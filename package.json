@@ -6,13 +6,13 @@
   "scripts": {
     "start": "http-server",
     "lint": "eslint",
-    "build": "NODE_ENV=development webpack",
+    "build": "set NODE_ENV=development && webpack",
     "build:prod": "webpack",
     "nodemon": "nodemon",
     "serve": "webpack-dev-server",
-    "hot": "NODE_ENV=hot webpack-dev-server",
-    "express": "NODE_ENV=development PORT=8080 node server.js",
-    "express:prod": "npm run build:prod && PORT=8081 node server.js"
+    "hot": "set NODE_ENV=hot && webpack-dev-server",
+    "express": "set NODE_ENV=development && set PORT=8080 && node server.js",
+    "express:prod": "npm run build:prod && set PORT=8081 && node server.js"
   },
   "repository": {
     "type": "git",
@@ -42,9 +42,11 @@
     "eslint-plugin-import": "^2.2.0",
     "express": "^4.14.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "^3.0.1",
     "html-es6-template-loader": "^1.0.2",
     "html-webpack-plugin": "^2.28.0",
     "http-server": "^0.9.0",
+    "image-webpack-loader": "^4.6.0",
     "node-sass": "^4.5.0",
     "nodemon": "^1.11.0",
     "sass-loader": "^5.0.1",

@@ -7,13 +7,13 @@
     "clean": "rimraf dist",
     "start": "http-server ./dist/",
     "lint": "eslint",
-    "build:dev": "npm run clean && NODE_ENV=development webpack",
+    "build:dev": "npm run clean && set NODE_ENV=development && webpack",
     "build": "npm run clean && webpack",
     "nodemon": "nodemon",
     "serve": "webpack-dev-server",
-    "hot": "NODE_ENV=hot webpack-dev-server",
-    "express:dev": "NODE_ENV=development PORT=8080 node server.js",
-    "express": "npm run build && PORT=8081 node server.js"
+    "hot": "set NODE_ENV=hot && webpack-dev-server",
+    "express:dev": "set NODE_ENV=development && set PORT=8080 && node server.js",
+    "express": "npm run build && set PORT=8081 && node server.js"
   },
   "repository": {
     "type": "git",

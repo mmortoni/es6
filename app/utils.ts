@@ -1,6 +1,10 @@
 import { ImageMessage } from './model/image-message.model';
 import { Message } from './model/message.model';
 
+interface Factory {
+  (text: string): Promise<any>;
+}
+
 function messageFactory(text: string): Promise<Message> {
   const giphy: RegExp = /\/giphy ('.*'|\w+)/;
   if (giphy.test(text)) {

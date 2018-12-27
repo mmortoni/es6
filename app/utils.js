@@ -21,7 +21,7 @@ function messageFactory(text) {
     return Promise.resolve(new model_2.Message(text));
 }
 exports.messageFactory = messageFactory;
-var Store = (function () {
+var Store = /** @class */ (function () {
     function Store() {
         var sStore = localStorage.getItem('store');
         this.store = sStore ? JSON.parse(sStore) : new Set();
